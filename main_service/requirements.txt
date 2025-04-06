@@ -1,0 +1,5 @@
+Flask==2.0.1
+Werkzeug==2.0.3
+requests==2.26.0
+selenium==3.141.0  # Selenium for frontend testing
+pytest==6.2.4  # Pytest for testing

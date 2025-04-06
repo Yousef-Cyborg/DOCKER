@@ -1,0 +1,37 @@
+to rebuild the image after each updates:
+docker-compose build --no-cache
+
+then run: 
+
+
+
+
+
+For Dockerized testing:
+If you're running the tests inside Docker, ensure you're running it from within the container. You can run the tests for API service and Main service as follows:
+
+For the API service:
+
+
+docker-compose run api-service pytest tests/test_api.py
+For the Main service (Frontend):
+
+
+docker-compose run main-service  main_service/tests/test_frontend.py
+This ensures that Selenium and pytest are executed within the appropriate Docker container.
+
+
+Running Tests Locally
+To run tests locally:
+
+Run API tests:
+
+If you want to run the API service tests using pytest, execute the following:
+
+pytest tests/test_api.py
+Run Frontend tests (Selenium):
+
+Ensure that Selenium WebDriver is installed and that you have access to the correct browser driver (e.g., ChromeDriver for Chrome). Then run:
+
+pytest tests/test_frontend.py
+This will launch a browser, interact with the UI, and ensure that the frontend functions correctly.
